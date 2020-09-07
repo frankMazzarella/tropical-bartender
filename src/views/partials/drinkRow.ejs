@@ -1,0 +1,8 @@
+<a href="#" class="list-group-item list-group-item-action">
+  <%= drink.name %><br>
+  <small>
+    <% drink.ingredients.forEach((ingredient, index) => { %>
+      <%= ingredient %><% if (drink.ingredients.length !== index + 1) { %>,<% } %>
+    <% }); %>
+  </small>
+</a>

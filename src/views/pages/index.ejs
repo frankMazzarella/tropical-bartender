@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Order a Drink!</title>
+  <%- include('../partials/head'); %>
+</head>
+<body>
+  <div class="list-group">
+    <% drinkList.forEach(drink => { %>
+        <%- include('../partials/drinkRow', { drink }); %>
+    <% }); %>
+  </div>
+</body>
+</html>

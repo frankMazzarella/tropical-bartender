@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Screwdriver",
+    "ingredients": [
+      "Orange Juice",
+      "Vodka"
+    ]
+  },
+  {
+    "name": "Blue 501",
+    "ingredients": [
+      "Blue alcohol no.1",
+      "Blue alcohol no.2",
+      "Blue alcohol no.3"
+    ]
+  },
+  {
+    "name": "Mojito",
+    "ingredients": [
+      "Local Mint",
+      "Simple Sugar",
+      "Alcohol"
+    ]
+  }
+]
