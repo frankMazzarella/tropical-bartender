@@ -1,0 +1,22 @@
+<script>
+  $orderModal = $('#order-modal');
+  $orderNameInput = $('#order-name-input');
+  $orderSubmitButton = $('#order-submit-button');
+  $orderSubmitButtonLoadingSpinner = $('#order-submit-button-spinner');
+  $orderCancelButton = $('#order-cancel-button');
+
+  $orderCancelButton.click(() => {
+    $orderNameInput.val('');
+  });
+
+  $orderSubmitButton.click(() => {
+    $orderSubmitButton.attr('disabled', true);
+    $orderSubmitButtonLoadingSpinner.toggle();
+    // $orderModal.modal('toggle');
+    $orderNameInput.val('');
+  });
+
+  function postDrinkOrder() {
+    //
+  }
+</script>
