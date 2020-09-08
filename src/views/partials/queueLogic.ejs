@@ -1,0 +1,44 @@
+<script>
+  $orderedDrinkListDiv = $('#ordered-drink-list-div');
+  const socket = io();
+
+  socket.on('queue update', (orders) => {
+    buildOrderList(orders);
+  });
+
+  function buildOrderList(orders) {
+    $orderedDrinkListDiv.empty();
+    orders.forEach((order) => {
+      $orderedDrinkListDiv.append(getRowHTML(order));
+    });
+  }
+
+  function getRowHTML(drink) {
+    const ingredientsList = getIngredientsListString(drink.ingredients);
+    const timeOrdered = formatTimeOrdered(drink.timestamp);
+    return `
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">${drink.name}</h5>
+          <small>${timeOrdered}</small>
+        </div>
+        <p class="mb-1">${ingredientsList}</p>
+        <small>Ordered by ${drink.recipient}</small>
+      </a>
+    `;
+  }
+
+  function getIngredientsListString(ingredients) {
+    let ingredientList = '';
+    ingredients.forEach((ingredient, index) => {
+      ingredientList += ingredient;
+      if (ingredients.length !== index + 1) ingredientList += ', '
+    });
+    return ingredientList;
+  }
+
+  function formatTimeOrdered(timeOrderedMS) {
+    const date = new Date(timeOrderedMS);
+    return `Ordered ${date.getHours()}:${date.getMinutes()}`;
+  }
+</script>

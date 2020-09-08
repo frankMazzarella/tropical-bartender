@@ -4,14 +4,9 @@
   <title>Drink Queue</title>
   <%- include('../partials/head'); %>
   <script src="/socket.io/socket.io.js"></script>
-  <script>
-    const socket = io();
-    socket.on('queue update', (orders) => {
-      console.log(orders);
-    });
-  </script>
 </head>
 <body>
-  <p>drink queue</p>
+  <div class="list-group" id="ordered-drink-list-div"></div>
+  <%- include('../partials/queueLogic'); %>
 </body>
 </html>

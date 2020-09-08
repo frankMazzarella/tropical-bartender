@@ -7,10 +7,10 @@
 <body>
   <div class="list-group">
     <% drinkList.forEach(drink => { %>
-        <%- include('../partials/drinkRow', { drink }); %>
+        <%- include('../partials/availableDrinkRow', { drink }); %>
     <% }); %>
   </div>
   <%- include('../partials/orderModal'); %>
-  <%- include('../partials/orderLogic'); %>
+  <%- include('../partials/indexLogic'); %>
 </body>
 </html>
