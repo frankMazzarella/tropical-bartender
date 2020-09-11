@@ -1,4 +1,4 @@
-<div class="modal" id="delete-order-modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+<div class="modal" id="delete-modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -11,8 +11,11 @@
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">I made a mistake</button>
-        <button type="button" class="btn btn-primary" id="delete-order-button">Yeah delete it</button>
+        <button type="button" class="btn btn-secondary" id="delete-order-cancel-button" data-dismiss="modal">I made a mistake</button>
+        <button type="button" class="btn btn-primary" id="delete-order-button">
+          <span class="spinner-border spinner-border-sm" id="delete-order-button-spinner" style="display: none" role="status" aria-hidden="true"></span>  
+          Yeah delete it
+        </button>
       </div>
     </div>
   </div>

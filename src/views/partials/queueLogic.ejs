@@ -1,15 +1,49 @@
 <script>
   let activeDrinkOrder;
   let $drinkOrderItem;
+  const $deleteModal = $('#delete-modal');
   const $orderedDrinkListDiv = $('#ordered-drink-list-div');
   const $activeDrinkNameSpan = $('#active-drink-name-span');
   const $activeDrinkRecipientSpan = $('#active-drink-recipient-span');
+  const $deleteOrderButton = $('#delete-order-button');
+  const $deleteOrderButtonSpinner = $('#delete-order-button-spinner');
+  const $deleteOrderCancelButton = $('#delete-order-cancel-button');
   const socket = io();
 
   socket.on('queue update', (orders) => {
     buildOrderList(orders);
     setDrinkItemClickHandlers();
+    if (orders.length === 0) showNoOrdersWarning();
   });
+
+  $deleteOrderButton.click(function() {
+    setModalLoading();
+    socket.emit('delete drink order', activeDrinkOrder.id, () => {
+      $deleteModal.modal('toggle');
+      setModalReady();
+    });
+  });
+
+  function showNoOrdersWarning() {
+    const noOrdersHTML = `
+      <div class="alert alert-primary" role="alert">
+        There are no pending drink orders
+      </div>
+    `;
+    $orderedDrinkListDiv.append(noOrdersHTML);
+  }
+
+  function setModalLoading() {
+    $deleteOrderCancelButton.attr('disabled', true);
+    $deleteOrderButton.attr('disabled', true);
+    $deleteOrderButtonSpinner.show();
+  }
+
+  function setModalReady() {
+    $deleteOrderCancelButton.attr('disabled', false);
+    $deleteOrderButton.attr('disabled', false);
+    $deleteOrderButtonSpinner.hide();
+  }
 
   function buildOrderList(orders) {
     $orderedDrinkListDiv.empty();
@@ -32,7 +66,7 @@
     const timeOrdered = formatTimeOrdered(drink.timestamp);
     return `
       <button class="list-group-item list-group-item-action flex-column align-items-start drink-order-item"
-        data-toggle="modal" data-target="#delete-order-modal" data-drink-order='${JSON.stringify(drink)}'>
+        data-toggle="modal" data-target="#delete-modal" data-drink-order='${JSON.stringify(drink)}'>
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1">${drink.name}</h5>
           <small>${timeOrdered}</small>
