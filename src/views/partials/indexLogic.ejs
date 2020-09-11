@@ -7,6 +7,7 @@
   $orderSubmitButton = $('#order-submit-button');
   $orderSubmitButtonLoadingSpinner = $('#order-submit-button-spinner');
   $orderCancelButton = $('#order-cancel-button');
+  const socket = io();
 
   $drinkItem.click(function() {
     activeDrink = $(this).data('drink');
@@ -49,13 +50,8 @@
       ingredients: activeDrink.ingredients,
       recipient
     };
-    $.ajax({
-      type: 'POST',
-      url: '/api/v1/orderdrink',
-      contentType: 'application/json',
-      data: JSON.stringify(drinkOrder),
-      dataType: 'json',
-      success: (response) => callback(response)
+    socket.emit('add drink order', drinkOrder, (response) => {
+      callback(response);
     });
   }
 </script>
