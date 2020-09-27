@@ -1,0 +1,23 @@
+{
+  "name": "tropical-bartender",
+  "version": "1.0.0",
+  "description": "Drink ordering system",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node .",
+    "nodemon": "nodemon ."
+  },
+  "author": "Frank Mazzarella <mazzarella.frank@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

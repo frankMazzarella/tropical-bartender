@@ -1,0 +1,57 @@
+<script>
+  let activeDrink;
+  $activeDrinkSpan = $('#active-drink-span');
+  $drinkItem = $('.drink-item');
+  $orderModal = $('#order-modal');
+  $orderNameInput = $('#order-name-input');
+  $orderSubmitButton = $('#order-submit-button');
+  $orderSubmitButtonLoadingSpinner = $('#order-submit-button-spinner');
+  $orderCancelButton = $('#order-cancel-button');
+  const socket = io();
+
+  $drinkItem.click(function() {
+    activeDrink = $(this).data('drink');
+    $activeDrinkSpan.text(activeDrink.name);
+  });
+
+  $orderCancelButton.click(function() {
+    $orderNameInput.val('');
+  });
+
+  $orderSubmitButton.click(function() {
+    const recipient = $orderNameInput.val();
+    if (!recipient) {
+      $orderNameInput.focus();
+      return;
+    };
+    setModalLoading();
+    postDrinkOrder(recipient, (response) => {
+      $orderModal.modal('toggle');
+      setModalReady();
+    });
+  });
+
+  function setModalLoading() {
+    $orderSubmitButton.attr('disabled', true);
+    $orderCancelButton.attr('disabled', true);
+    $orderSubmitButtonLoadingSpinner.show();
+  }
+
+  function setModalReady() {
+    $orderNameInput.val('');
+    $orderSubmitButton.attr('disabled', false);
+    $orderCancelButton.attr('disabled', false);
+    $orderSubmitButtonLoadingSpinner.hide();
+  }
+
+  function postDrinkOrder(recipient, callback) {
+    const drinkOrder = {
+      name: activeDrink.name,
+      ingredients: activeDrink.ingredients,
+      recipient
+    };
+    socket.emit('add drink order', drinkOrder, (response) => {
+      callback(response);
+    });
+  }
+</script>
