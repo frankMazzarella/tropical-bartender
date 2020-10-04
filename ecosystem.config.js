@@ -3,7 +3,9 @@ module.exports = {
     {
       name: 'tropical-bartender',
       script: 'src/app.js',
-      watch: false
+      watch: false,
+      instances: 1,
+      exec_mode: 'cluster'
     }
   ]
 };
