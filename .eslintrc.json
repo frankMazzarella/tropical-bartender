@@ -12,7 +12,7 @@
   },
   "rules": {
     "no-use-before-define": "off",
-    "no-console": "error",
+    "no-console": "off",
     "max-len": ["error", { "code": 120 }]
   }
 }

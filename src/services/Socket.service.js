@@ -14,7 +14,7 @@ const init = (httpServer) => {
     socket.emit(QUEUE_UPDATE, DrinkQueueService.getQueue());
     registerEventHandlers(socket);
   });
-}
+};
 
 function registerEventHandlers(socket) {
   socket.on(DELETE_DRINK_ORDER, (id, callback) => {
@@ -25,10 +25,11 @@ function registerEventHandlers(socket) {
   });
 
   socket.on(ADD_DRINK_ORDER, (drink, callback) => {
-    drink.id = uuid.v4();
-    drink.timestamp = new Date().getTime();
-    console.log(`add drink order: ${JSON.stringify(drink)}`);
-    DrinkQueueService.addDrink(drink);
+    const drinkOrder = drink;
+    drinkOrder.id = uuid.v4();
+    drinkOrder.timestamp = new Date().getTime();
+    console.log(`add drink order: ${JSON.stringify(drinkOrder)}`);
+    DrinkQueueService.addDrink(drinkOrder);
     io.emit(QUEUE_UPDATE, DrinkQueueService.getQueue());
     callback();
   });
