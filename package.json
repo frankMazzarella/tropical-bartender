@@ -1,7 +1,7 @@
 {
-  "name": "tropical-bartender",
+  "name": "tropical-bartender-server",
   "version": "1.1.2",
-  "description": "Drink ordering system",
+  "description": "Drink ordering system server",
   "main": "src/app.js",
   "bin": "src/app.js",
   "scripts": {
