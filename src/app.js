@@ -5,7 +5,6 @@ const http = require('http');
 const fs = require('fs');
 const os = require('os');
 
-const drinkList = require('./drinkList.json');
 const SocketService = require('./services/Socket.service');
 
 const port = 3000;
@@ -15,10 +14,7 @@ const httpServer = http.createServer(app);
 SocketService.init(httpServer);
 
 app.use(compression());
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-app.get('/', (req, res) => res.render('pages/index', { drinkList }));
-app.get('/queue', (req, res) => res.render('pages/queue'));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 app.get('/healthcheck', (req, res) => res.json({ uptime: process.uptime(), version: packageJson.version }));
 
 httpServer.listen(port, () => {
