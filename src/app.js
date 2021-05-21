@@ -9,7 +9,7 @@ const drinkList = require('./drinkList.json');
 const SocketService = require('./services/Socket.service');
 
 const port = 3000;
-const packageJson = JSON.parse(fs.readFileSync('package.json').toString());
+const packageJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json')).toString());
 const app = express();
 const httpServer = http.createServer(app);
 SocketService.init(httpServer);
