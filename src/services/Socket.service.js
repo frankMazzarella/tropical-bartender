@@ -9,7 +9,7 @@ const DELETE_DRINK_ORDER = 'delete drink order';
 const ADD_DRINK_ORDER = 'add drink order';
 
 const init = (httpServer) => {
-  io = socketIO(httpServer);
+  io = socketIO(httpServer, { cors: { origin: '*' } });
   io.on('connection', (socket) => {
     socket.emit(QUEUE_UPDATE, DrinkQueueService.getQueue());
     registerEventHandlers(socket);
