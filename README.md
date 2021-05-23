@@ -1,10 +1,22 @@
-# tropical-bartender
-Drink ordering system
+# tropical-bartender-server
+Drink ordering system backend services
 
 ## Installation and Startup
 - Install the dependencies with `$ npm install`
 - Start the server with `$ npm start`
   - The server can be started in watch mode with `$ npm run nodemon`
+- This package relies on `tropical-bartender-vue` to run
+
+## Vue Frontend
+- Make sure to have `tropical-bartender-server` and `tropical-bartender-vue` projects in the same directory
+- Follow `deploy` instructions in `tropical-bartender-vue` to have the frontend output placed in the `public` directory of this project
+- The `public` directory is used by this project to serve the frontend
+- Make sure to have the lastest frontend assets transferred into this project before attempting to compile the executable
+
+## Building the executable
+- The project can be ran using `$ npm start` or you can build a single executable that packages node and all of the
+required dependencies
+- Run `$ npm run build` to have a Windows, Mac, and Linux executable placed in the `dist` directory
 
 ## Usage
 - The server will be available within the network of the host machine

@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Screwdriver",
+    "ingredients": [
+      {
+        "name": "Orange Juice",
+        "amount": ""
+      },
+      {
+        "name": "Vodka",
+        "amount": "2 shots"
+      }
+    ]
+  },
+  {
+    "name": "501 Blue",
+    "ingredients": [
+      {
+        "name": "Blue Alcohol 1",
+        "amount": "whatever is left"
+      },
+      {
+        "name": "Blue Alcohol 2",
+        "amount": "2 cups"
+      },
+      {
+        "name": "Blue Alcohol 3",
+        "amount": "4 shots"
+      }
+    ]
+  },
+  {
+    "name": "Mojito",
+    "ingredients": [
+      {
+        "name": "Local Mint",
+        "amount": "5 leaves"
+      },
+      {
+        "name": "Simple Sugar",
+        "amount": "1 shot"
+      },
+      {
+        "name": "Alcohol",
+        "amount": "all of it"
+      }
+    ]
+  },
+  {
+    "name": "Long name drink baby",
+    "ingredients": [
+      {
+        "name": "Local Mint",
+        "amount": "5 leaves"
+      },
+      {
+        "name": "Simple Sugar",
+        "amount": "1 shot"
+      },
+      {
+        "name": "Alcohol",
+        "amount": "all of it"
+      }
+    ]
+  },
+  {
+    "name": "SOMEONE PLEASE",
+    "ingredients": [
+      {
+        "name": "Update",
+        "amount": "1 shot"
+      },
+      {
+        "name": "This",
+        "amount": "2 shot"
+      },
+      {
+        "name": "List",
+        "amount": "1 shot"
+      }
+    ]
+  }
+]
