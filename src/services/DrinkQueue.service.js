@@ -1,5 +1,7 @@
 let drinkQueue = [];
 
+// TODO: persist queue to disk
+
 const addDrink = (drink) => drinkQueue.push(drink);
 const getQueue = () => drinkQueue;
 const removeDrink = (id) => {

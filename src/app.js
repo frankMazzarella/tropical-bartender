@@ -4,24 +4,25 @@ const path = require('path');
 const http = require('http');
 const fs = require('fs');
 const os = require('os');
+const getPort = require('get-port');
 
 const fileService = require('./services/File.service');
 const SocketService = require('./services/Socket.service');
 
-const port = 3000;
-const packageJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json')).toString());
+const drinkList = fileService.readDrinkList();
+const packageJSON = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json')));
 const app = express();
 const httpServer = http.createServer(app);
 SocketService.init(httpServer);
 
-const drinkListPath = path.join(__dirname, '..', 'drinks.json');
-const drinkList = fileService.readJSONFileSync(drinkListPath);
-
 app.use(compression());
 app.use(express.static(path.join(__dirname, '..', 'public')));
-app.get('/healthcheck', (req, res) => res.json({ uptime: process.uptime(), version: packageJson.version }));
 app.get('/drinks', (req, res) => res.json(drinkList));
+app.get('/healthcheck', (req, res) => res.json({ uptime: process.uptime(), version: packageJSON.version }));
 
-httpServer.listen(port, () => {
-  console.log(`${packageJson.name} v${packageJson.version} has started on port ${port} [host: ${os.hostname}]`);
-});
+(async () => {
+  const port = await getPort({ port: 3000 });
+  httpServer.listen(port, () => {
+    console.log(`${packageJSON.name} v${packageJSON.version} has started on port ${port} [host: ${os.hostname}]`);
+  });
+})();
