@@ -8,16 +8,16 @@ const getPort = require('get-port');
 
 const fileService = require('./services/File.service');
 const SocketService = require('./services/Socket.service');
+const DrinkService = require('./services/Drink.service');
 
-const drinkList = fileService.readDrinkList();
 const packageJSON = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json')));
 const app = express();
 const httpServer = http.createServer(app);
+DrinkService.updateDrinkList(fileService.readDrinkList());
 SocketService.init(httpServer);
 
 app.use(compression());
 app.use(express.static(path.join(__dirname, '..', 'public')));
-app.get('/drinks', (req, res) => res.json(drinkList));
 app.get('/healthcheck', (req, res) => res.json({ uptime: process.uptime(), version: packageJSON.version }));
 
 (async () => {
