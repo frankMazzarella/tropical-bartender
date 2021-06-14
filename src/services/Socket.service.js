@@ -4,6 +4,7 @@ const uuid = require('uuid');
 const DrinkService = require('./Drink.service');
 
 let io;
+let orderQueueNamespace;
 const QUEUE_UPDATE = 'queue update';
 const DELETE_DRINK_ORDER = 'delete drink order';
 const ADD_DRINK_ORDER = 'add drink order';
@@ -18,11 +19,11 @@ const init = (httpServer) => {
   io.of(DRINK_LIST_NAMESPACE).on(CONNECTION, (socket) => {
     socket.emit(DRINK_LIST, DrinkService.getDrinkList());
     handleAddDrinkOrder(socket);
-    handleDeleteDrinkOrder(socket);
   });
 
-  io.of(ORDER_QUEUE_NAMESPACE).on(CONNECTION, (socket) => {
+  orderQueueNamespace = io.of(ORDER_QUEUE_NAMESPACE).on(CONNECTION, (socket) => {
     socket.emit(QUEUE_UPDATE, DrinkService.getDrinkQueue());
+    handleDeleteDrinkOrder(socket);
   });
 };
 
@@ -33,7 +34,7 @@ const handleAddDrinkOrder = (socket) => {
     drinkOrder.timestamp = new Date().getTime();
     DrinkService.addDrinkOrder(drinkOrder);
     console.log(`add drink order: ${JSON.stringify(drinkOrder)}`);
-    io.emit(QUEUE_UPDATE, DrinkService.getDrinkQueue());
+    orderQueueNamespace.emit(QUEUE_UPDATE, DrinkService.getDrinkQueue());
     callback();
   });
 };
