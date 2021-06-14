@@ -17,12 +17,12 @@ const init = (httpServer) => {
 
   io.of(DRINK_LIST_NAMESPACE).on(CONNECTION, (socket) => {
     socket.emit(DRINK_LIST, DrinkService.getDrinkList());
+    handleAddDrinkOrder(socket);
+    handleDeleteDrinkOrder(socket);
   });
 
   io.of(ORDER_QUEUE_NAMESPACE).on(CONNECTION, (socket) => {
     socket.emit(QUEUE_UPDATE, DrinkService.getDrinkQueue());
-    handleAddDrinkOrder(socket);
-    handleDeleteDrinkOrder(socket);
   });
 };
 
