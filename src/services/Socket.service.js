@@ -33,7 +33,7 @@ const handleAddDrinkOrder = (socket) => {
     drinkOrder.id = uuid.v4();
     drinkOrder.timestamp = new Date().getTime();
     DrinkService.addDrinkOrder(drinkOrder);
-    console.log(`add drink order: ${JSON.stringify(drinkOrder)}`);
+    console.log(`${drinkOrder.name} ordered by ${drinkOrder.recipient}`);
     orderQueueNamespace.emit(QUEUE_UPDATE, DrinkService.getDrinkQueue());
     callback();
   });
