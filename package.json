@@ -16,6 +16,7 @@
     "scripts": "src/**/*.js",
     "assets": [
       "package.json",
+      "drinks.json",
       "public/**/*"
     ],
     "outputPath": "dist"
