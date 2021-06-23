@@ -1,11 +1,17 @@
+const uuid = require('uuid');
+
 let drinkQueue = [];
 let drinkList = [];
 
-// TODO: persist queue to disk
-
-const updateDrinkList = (list) => {
-  drinkList = list;
+const initDrinkList = (list) => {
+  drinkList = list.map((drink) => {
+    const drinkItem = drink;
+    drinkItem.id = uuid.v4();
+    drinkItem.active = true;
+    return drinkItem;
+  });
 };
+
 // TODO: this should be two files - Drink.service.js and Order.service.js
 
 const getDrinkList = () => drinkList;
@@ -18,10 +24,23 @@ const removeDrinkOrder = (id) => {
   drinkQueue = drinkQueue.filter((drink) => drink.id !== id);
 };
 
+const toggleDrinkActive = (id) => {
+  let updatedDrink;
+  drinkList.forEach((drink, index) => {
+    if (drink.id === id) {
+      updatedDrink = drink;
+      updatedDrink.active = !updatedDrink.active;
+      drinkList[index] = updatedDrink;
+    }
+  });
+  return updatedDrink;
+};
+
 module.exports = {
   addDrinkOrder,
   getDrinkQueue,
   removeDrinkOrder,
-  updateDrinkList,
+  initDrinkList,
   getDrinkList,
+  toggleDrinkActive,
 };

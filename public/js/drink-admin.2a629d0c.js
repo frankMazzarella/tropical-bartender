@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["drink-admin"],{"997d":function(n,e,i){"use strict";i.r(e);var r=function(){var n=this,e=n.$createElement,i=n._self._c||e;return i("div",[n._v("Drink Admin")])},t=[],a={name:"DrinkAdmin"},d=a,l=i("2877"),u=Object(l["a"])(d,r,t,!1,null,null,null);e["default"]=u.exports}}]);
-//# sourceMappingURL=drink-admin.2a629d0c.js.map

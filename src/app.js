@@ -14,7 +14,7 @@ const vueAppDirectory = path.join(__dirname, '..', 'public');
 const packageJSON = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json')));
 const app = express();
 const httpServer = http.createServer(app);
-DrinkService.updateDrinkList(fileService.readDrinkList());
+DrinkService.initDrinkList(fileService.readDrinkList());
 SocketService.init(httpServer);
 
 app.use(compression());
