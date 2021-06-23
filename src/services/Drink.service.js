@@ -6,6 +6,7 @@ let drinkList = [];
 const updateDrinkList = (list) => {
   drinkList = list;
 };
+// TODO: this should be two files - Drink.service.js and Order.service.js
 
 const getDrinkList = () => drinkList;
 

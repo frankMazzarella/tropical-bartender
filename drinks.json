@@ -1,27 +1,29 @@
 [
   {
     "name": "Screwdriver",
+    "type": "iced",
     "ingredients": [
-      {
-        "name": "Orange Juice",
-        "amount": ""
-      },
       {
         "name": "Vodka",
         "amount": "2 shots"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "fill remainder of glass"
       }
     ]
   },
   {
     "name": "501 Blue",
+    "type": "slushy",
     "ingredients": [
       {
-        "name": "Blue Alcohol 1",
-        "amount": "whatever is left"
+        "name": "reallly really long name",
+        "amount": "whatever"
       },
       {
         "name": "Blue Alcohol 2",
-        "amount": "2 cups"
+        "amount": "really really long amoount"
       },
       {
         "name": "Blue Alcohol 3",
@@ -31,6 +33,7 @@
   },
   {
     "name": "Mojito",
+    "type": "iced",
     "ingredients": [
       {
         "name": "Local Mint",
@@ -48,6 +51,7 @@
   },
   {
     "name": "Long name drink baby",
+    "type": "slushy",
     "ingredients": [
       {
         "name": "Local Mint",
@@ -65,6 +69,7 @@
   },
   {
     "name": "Overflow test",
+    "type": "iced",
     "ingredients": [
       {
         "name": "Local Mint",
@@ -106,6 +111,7 @@
   },
   {
     "name": "SOMEONE PLEASE",
+    "type": "iced",
     "ingredients": [
       {
         "name": "Update",
