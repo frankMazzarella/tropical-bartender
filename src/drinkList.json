@@ -1,41 +1,993 @@
 [
   {
-    "name": "Screwdriver",
+    "name": "Dirty Monkey",
+    "type": "Smoothie",
     "ingredients": [
-      "Orange Juice",
-      "Vodka"
-    ]
+      {
+        "name": "Pina Colada Mix",
+        "amount": "8 oz"
+      },
+      {
+        "name": "Kahlua",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Vodka",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Banana",
+        "amount": "1/2"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
   },
   {
-    "name": "501 Blue",
+    "name": "Electric Lemonade",
+    "type": "Smoothie",
     "ingredients": [
-      "Blue alcohol no.1",
-      "Blue alcohol no.2",
-      "Blue alcohol no.3"
-    ]
+      {
+        "name": "Margarita Mix",
+        "amount": "8 oz"
+      },
+      {
+        "name": "Lime Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Vodka",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Midori",
+        "amount": "1.5 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
   },
   {
-    "name": "Mojito",
+    "name": "Bahama Mama",
     "ingredients": [
-      "Local Mint",
-      "Simple Sugar",
-      "Alcohol"
-    ]
+      {
+        "name": "Rum",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Coconut Rum",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Grenadine",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
   },
   {
-    "name": "Long name drink baby",
+    "name": "Melon Colada",
+    "type": "Smoothie",
     "ingredients": [
-      "Local Mint",
-      "Simple Sugar",
-      "Alcohol"
-    ]
+      {
+        "name": "Rum",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Midori",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pina Colada Mix",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
   },
   {
-    "name": "SOMEONE PLEASE",
+    "name": "Banana Daquiri",
+    "type": "Smoothie",
     "ingredients": [
-      "Update",
-      "This",
-      "List!"
-    ]
+      {
+        "name": "Rum",
+        "amount": "1.5 oz"
+      },
+      {
+        "name": "Banana",
+        "amount": "1/2"
+      },
+      {
+        "name": "Lime Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Lime Cordial",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": "0.5 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Strawberry Daquiri",
+    "type": "Smoothie",
+    "ingredients": [
+      {
+        "name": "Rum",
+        "amount": "1.5 oz"
+      },
+      {
+        "name": "Strawberry",
+        "amount": "4"
+      },
+      {
+        "name": "Lime Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Lime Cordial",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": "0.5 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Cindy's Cycle",
+    "type": "Smoothie",
+    "ingredients": [
+      {
+        "name": "Tequila",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Midori",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Grenadine",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Sweet n Sour Mix",
+        "amount": "4 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Evita",
+    "type": "Smoothie",
+    "ingredients": [
+      {
+        "name": "Orange Juice",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Vodka",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Midori",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Sweet n Sour Mix",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Green Eyes",
+    "type": "Smoothie",
+    "ingredients": [
+      {
+        "name": "Midori",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Rum",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Coconut Cream",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Lime Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "2 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Rum Colada",
+    "type": "Smoothie",
+    "ingredients": [
+      {
+        "name": "Spiced Rum",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Coconut Cream",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "3 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Kahlua Colada",
+    "type": "Smoothie",
+    "ingredients": [
+      {
+        "name": "Kahlua",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Coconut Cream",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "2 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Comfort Colada",
+    "type": "Smoothie",
+    "ingredients": [
+      {
+        "name": "Southern Comfort",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Coconut Cream",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "2 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Key West Song",
+    "type": "Smoothie",
+    "ingredients": [
+      {
+        "name": "Spiced Rum",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Coconut Cream",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "2 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Flamingo",
+    "type": "Smoothie",
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Coconut Cream",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Sweet n Sour Mix",
+        "amount": "2 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Kahlua Banana",
+    "type": "Smoothie",
+    "ingredients": [
+      {
+        "name": "Kahlua",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Rum",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Coconut Cream",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Banana",
+        "amount": "1/2"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Dirty Christmas Tree",
+    "type": "Smoothie",
+    "ingredients": [
+      {
+        "name": "Coconut Rum",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Midori",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Grenadine",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Sweet n Sour Mix",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "America",
+    "type": "Smoothie",
+    "ingredients": [
+      {
+        "name": "Pina Colada Mix",
+        "amount": "8 oz"
+      },
+      {
+        "name": "Rum",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Blue Curacao",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Grenadine",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "501 Blues",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Blue Curacao",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Blueberry Schnapps",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Vodka",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Sweet n Sour Mix",
+        "amount": "4 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Blue Hawaiian",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Rum",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Blue Curacao",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "3 oz"
+      },
+      {
+        "name": "Lime Juice",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Tequila Sunrise",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Grenadine",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Tequila",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "4 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Alabama Slammer",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Southern Comfort",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Amaretto",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Grenadine",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "4 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Mai Tai",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Rum",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Grand Marnier",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Amaretto",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "3 oz"
+      },
+      {
+        "name": "Lime Juice",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Planter's Punch",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Rum",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Grenadine",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "4 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Reef Juice",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Dark Rum",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Banana Liqueur",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "3 oz"
+      },
+      {
+        "name": "Lime Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Grenadine",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Zombie",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Light Rum",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Dark Rum",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Grand Marnier",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Grenadine",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Killer Kool Aid",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Midori",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Amaretto",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Cranberry Juice",
+        "amount": "4 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Pain Killer",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Dark Rum",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Coconut Rum",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "2 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Singapore Sling",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Grenadine",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Lime Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Club Soda",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Barbado Punch",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Rum",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Grand Marnier",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Grenadine",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Lime Juice",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "2 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Blueberry Passion Cosmo",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Blueberry Schnapps",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Cranberry Juice",
+        "amount": "3 oz"
+      },
+      {
+        "name": "Lime Juice",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Blueberry Passion Margarita",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Tequila",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Blueberry Schnapps",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Sweet n Sour Mix",
+        "amount": "4 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Dip in the Ocean",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Rum",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Midori",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Coconut Rum",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Cranberry Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Grenadine",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Miami Ice",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Tequila",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Vodka",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Rum",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Coconut Cream",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Pineapple-Orange Margarita",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Tequila",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Margarita Mix",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Tropical Wave",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Rum",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "4 oz"
+      },
+      {
+        "name": "Cranberry Juice",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Bay Breeze",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "4 oz"
+      },
+      {
+        "name": "Cranberry Juice",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Malibu Bay Breeze",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Coconut Rum",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "4 oz"
+      },
+      {
+        "name": "Cranberry Juice",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Aruban Kiss",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Rum",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Banana Liqueur",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Blue Curacao",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Sweet n Sour Mix",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "3 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
+    "name": "Carribean Cruise",
+    "type": "Over Ice",
+    "ingredients": [
+      {
+        "name": "Spiced Rum",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Dark Rum",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Kahlua",
+        "amount": "0.5 oz"
+      },
+      {
+        "name": "Coconut Cream",
+        "amount": "0.75 oz"
+      },
+      {
+        "name": "Orange Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Pineapple Juice",
+        "amount": "1 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
   }
 ]
