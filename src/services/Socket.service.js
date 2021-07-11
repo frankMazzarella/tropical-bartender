@@ -2,6 +2,7 @@ const socketIO = require('socket.io');
 const uuid = require('uuid');
 
 const DrinkService = require('./Drink.service');
+const DrinkAgeService = require('./DrinkAge.service');
 
 let io;
 let orderQueueNamespace;
@@ -30,6 +31,8 @@ const init = (httpServer) => {
     socket.emit(QUEUE_UPDATE, DrinkService.getDrinkQueue());
     handleDeleteDrinkOrder(socket);
   });
+
+  DrinkAgeService.startPoll(drinkListNamespace);
 };
 
 const handleAddDrinkOrder = (socket) => {
