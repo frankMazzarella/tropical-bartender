@@ -19,10 +19,10 @@ required dependencies
 - Run `$ npm run build` to have a Windows, Mac, and Linux executable placed in the `dist` directory
 
 ## Usage
-## TODO: this section is out of date
 - The server will be available within the network of the host machine
 - The default port is `3000` but this can be configured in `/src/app.js`
 - The ordering screen can be accessed at `http://localhost:3000`
-- The bartender queue can be accessed at `http://localhost:3000/queue`
+- The bartender queue can be accessed at `http://localhost:3000/list`
+- The drink admin screen can be accessed at `http://localhost:3000/admin`
 - Substitute `localhost` with the host machines local IP address to access from devices within the network
   - Use `ipconfig` (windows) or `ifconfig` (linux) to view the host machines local IP address
