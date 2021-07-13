@@ -1,6 +1,5 @@
 const uuid = require('uuid');
 
-let drinkQueue = [];
 let drinkList = [];
 
 const initDrinkList = (list) => {
@@ -12,17 +11,7 @@ const initDrinkList = (list) => {
   });
 };
 
-// TODO: this should be two files - Drink.service.js and Order.service.js
-
 const getDrinkList = () => drinkList;
-
-const addDrinkOrder = (drink) => drinkQueue.push(drink);
-
-const getDrinkQueue = () => drinkQueue;
-
-const removeDrinkOrder = (id) => {
-  drinkQueue = drinkQueue.filter((drink) => drink.id !== id);
-};
 
 const toggleDrinkActive = (id) => {
   let updatedDrink;
@@ -37,9 +26,6 @@ const toggleDrinkActive = (id) => {
 };
 
 module.exports = {
-  addDrinkOrder,
-  getDrinkQueue,
-  removeDrinkOrder,
   initDrinkList,
   getDrinkList,
   toggleDrinkActive,

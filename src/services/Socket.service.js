@@ -2,6 +2,7 @@ const socketIO = require('socket.io');
 const uuid = require('uuid');
 
 const DrinkService = require('./Drink.service');
+const OrderService = require('./Order.service');
 const DrinkAgeService = require('./DrinkAge.service');
 const LoggingService = require('./Logging.service');
 
@@ -29,7 +30,7 @@ const init = (httpServer) => {
   });
 
   orderQueueNamespace = io.of(ORDER_QUEUE_NAMESPACE).on(CONNECTION, (socket) => {
-    socket.emit(QUEUE_UPDATE, DrinkService.getDrinkQueue());
+    socket.emit(QUEUE_UPDATE, OrderService.getDrinkQueue());
     handleDeleteDrinkOrder(socket);
   });
 
@@ -41,18 +42,18 @@ const handleAddDrinkOrder = (socket) => {
     const drinkOrder = drink;
     drinkOrder.id = uuid.v4();
     drinkOrder.timestamp = new Date().getTime();
-    DrinkService.addDrinkOrder(drinkOrder);
+    OrderService.addDrinkOrder(drinkOrder);
     LoggingService.green(`${drinkOrder.name} ordered by ${drinkOrder.recipient} with ID: ${drinkOrder.id}`);
-    orderQueueNamespace.emit(QUEUE_UPDATE, DrinkService.getDrinkQueue());
+    orderQueueNamespace.emit(QUEUE_UPDATE, OrderService.getDrinkQueue());
     callback();
   });
 };
 
 const handleDeleteDrinkOrder = (socket) => {
   socket.on(DELETE_DRINK_ORDER, (id, callback) => {
-    DrinkService.removeDrinkOrder(id);
+    OrderService.removeDrinkOrder(id);
     LoggingService.red(`deleting drink order with id: ${id}`);
-    orderQueueNamespace.emit(QUEUE_UPDATE, DrinkService.getDrinkQueue());
+    orderQueueNamespace.emit(QUEUE_UPDATE, OrderService.getDrinkQueue());
     callback();
   });
 };

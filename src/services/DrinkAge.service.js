@@ -1,4 +1,4 @@
-const DrinkService = require('./Drink.service');
+const OrderService = require('./Order.service');
 
 const OLDEST_DRINK_ORDER_AGE = 'oldest drink order age';
 
@@ -9,7 +9,7 @@ const startPoll = (drinkListNamespace) => {
 };
 
 const poll = (drinkListNamespace) => {
-  const drinkQueue = DrinkService.getDrinkQueue();
+  const drinkQueue = OrderService.getDrinkQueue();
   const drinkAges = drinkQueue.map((drink) => {
     const now = new Date();
     const drinkAge = now.getTime() - drink.timestamp;
