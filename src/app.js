@@ -9,6 +9,7 @@ const getPort = require('get-port');
 const fileService = require('./services/File.service');
 const SocketService = require('./services/Socket.service');
 const DrinkService = require('./services/Drink.service');
+const LoggingService = require('./services/Logging.service');
 
 const vueAppDirectory = path.join(__dirname, '..', 'public');
 const packageJSON = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json')));
@@ -25,6 +26,7 @@ app.use('*', express.static(vueAppDirectory));
 (async () => {
   const port = await getPort({ port: 3000 });
   httpServer.listen(port, () => {
-    console.log(`${packageJSON.name} v${packageJSON.version} has started on port ${port} [host: ${os.hostname}]`);
+    const log = `${packageJSON.name} v${packageJSON.version} has started on port ${port} [host: ${os.hostname}]`;
+    LoggingService.white(log);
   });
 })();

@@ -1,9 +1,9 @@
 const socketIO = require('socket.io');
 const uuid = require('uuid');
-const chalk = require('chalk');
 
 const DrinkService = require('./Drink.service');
 const DrinkAgeService = require('./DrinkAge.service');
+const LoggingService = require('./Logging.service');
 
 let io;
 let orderQueueNamespace;
@@ -18,7 +18,6 @@ const DRINK_LIST_NAMESPACE = '/drink-list';
 const ORDER_QUEUE_NAMESPACE = '/order-queue';
 
 // TODO: considering separating into 3 files. Socket.service.js, and one for each of the 2 namespaces
-// TODO: also refactor logging/chalk into a file
 
 const init = (httpServer) => {
   io = socketIO(httpServer, { cors: { origin: '*' } });
@@ -43,7 +42,7 @@ const handleAddDrinkOrder = (socket) => {
     drinkOrder.id = uuid.v4();
     drinkOrder.timestamp = new Date().getTime();
     DrinkService.addDrinkOrder(drinkOrder);
-    console.log(chalk.green(`${drinkOrder.name} ordered by ${drinkOrder.recipient} with ID: ${drinkOrder.id}`));
+    LoggingService.green(`${drinkOrder.name} ordered by ${drinkOrder.recipient} with ID: ${drinkOrder.id}`);
     orderQueueNamespace.emit(QUEUE_UPDATE, DrinkService.getDrinkQueue());
     callback();
   });
@@ -52,7 +51,7 @@ const handleAddDrinkOrder = (socket) => {
 const handleDeleteDrinkOrder = (socket) => {
   socket.on(DELETE_DRINK_ORDER, (id, callback) => {
     DrinkService.removeDrinkOrder(id);
-    console.log(chalk.red(`deleting drink order with id: ${id}`));
+    LoggingService.red(`deleting drink order with id: ${id}`);
     orderQueueNamespace.emit(QUEUE_UPDATE, DrinkService.getDrinkQueue());
     callback();
   });
@@ -61,7 +60,7 @@ const handleDeleteDrinkOrder = (socket) => {
 const handleToggleDrinkActive = (socket) => {
   socket.on(TOGGLE_DRINK_ACTIVE, (id, callback) => {
     const updatedDrink = DrinkService.toggleDrinkActive(id);
-    console.log(chalk.blue(`drink ${updatedDrink.id} was toggled to active = ${updatedDrink.active}`));
+    LoggingService.blue(`drink ${updatedDrink.id} was toggled to active = ${updatedDrink.active}`);
     drinkListNamespace.emit(DRINK_LIST, DrinkService.getDrinkList());
     callback(updatedDrink);
   });
