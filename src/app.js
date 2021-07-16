@@ -4,23 +4,29 @@ const path = require('path');
 const http = require('http');
 const fs = require('fs');
 const os = require('os');
+const getPort = require('get-port');
 
-const drinkList = require('./drinkList.json');
+const fileService = require('./services/File.service');
 const SocketService = require('./services/Socket.service');
+const DrinkService = require('./services/Drink.service');
+const LoggingService = require('./services/Logging.service');
 
-const port = 3000;
-const packageJson = JSON.parse(fs.readFileSync('package.json').toString());
+const vueAppDirectory = path.join(__dirname, '..', 'public');
+const packageJSON = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json')));
 const app = express();
 const httpServer = http.createServer(app);
+DrinkService.initDrinkList(fileService.readDrinkList());
 SocketService.init(httpServer);
 
 app.use(compression());
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-app.get('/', (req, res) => res.render('pages/index', { drinkList }));
-app.get('/queue', (req, res) => res.render('pages/queue'));
-app.get('/healthcheck', (req, res) => res.json({ uptime: process.uptime(), version: packageJson.version }));
+app.get('/healthcheck', (req, res) => res.json({ uptime: process.uptime(), version: packageJSON.version }));
+app.use('/', express.static(vueAppDirectory));
+app.use('*', express.static(vueAppDirectory));
 
-httpServer.listen(port, () => {
-  console.log(`${packageJson.name} v${packageJson.version} has started on port ${port} [host: ${os.hostname}]`);
-});
+(async () => {
+  const port = await getPort({ port: 3000 });
+  httpServer.listen(port, () => {
+    const log = `${packageJSON.name} v${packageJSON.version} has started on port ${port} [host: ${os.hostname}]`;
+    LoggingService.white(log);
+  });
+})();
