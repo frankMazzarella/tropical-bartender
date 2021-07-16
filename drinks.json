@@ -416,6 +416,34 @@
     "taste": 0
   },
   {
+    "name": "Mojito",
+    "type": "iced",
+    "ingredients": [
+      {
+        "name": "Rum",
+        "amount": "2 oz"
+      },
+      {
+        "name": "Lime Juice",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Simple Syrup",
+        "amount": "1 oz"
+      },
+      {
+        "name": "Mint",
+        "amount": "3 Leaves"
+      },
+      {
+        "name": "Club Soda",
+        "amount": "4 oz"
+      }
+    ],
+    "alcohol": 0,
+    "taste": 0
+  },
+  {
     "name": "501 Blues",
     "type": "iced",
     "ingredients": [
