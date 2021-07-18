@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
 
+// TODO: improve logging with timestamps and try to replace UUIDs with drink names when possible
+
 const chalk = require('chalk');
 
 const red = (log) => {
